@@ -1,0 +1,8 @@
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\bin\Debug\Flappy-Bird-Remake.dll
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\bin\Debug\Flappy-Bird-Remake.pdb
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.csprojAssemblyReference.cache
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.AssemblyInfoInputs.cache
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.AssemblyInfo.cs
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.csproj.CoreCompileInputs.cache
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.dll
+E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.pdb
