@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Flappy-Bird-Remake\\Flappy-Bird-Remake\\Flappy-Bird-Remake.csproj": {}
+    "E:\\Programming\\Projects\\OpenSource (I'm a GOD)\\repositories\\Flappy-Bird-Remake\\Flappy-Bird-Remake-With-Godot\\Flappy-Bird-Remake.csproj": {}
   },
   "projects": {
-    "E:\\Flappy-Bird-Remake\\Flappy-Bird-Remake\\Flappy-Bird-Remake.csproj": {
+    "E:\\Programming\\Projects\\OpenSource (I'm a GOD)\\repositories\\Flappy-Bird-Remake\\Flappy-Bird-Remake-With-Godot\\Flappy-Bird-Remake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Flappy-Bird-Remake\\Flappy-Bird-Remake\\Flappy-Bird-Remake.csproj",
+        "projectUniqueName": "E:\\Programming\\Projects\\OpenSource (I'm a GOD)\\repositories\\Flappy-Bird-Remake\\Flappy-Bird-Remake-With-Godot\\Flappy-Bird-Remake.csproj",
         "projectName": "Flappy-Bird-Remake",
-        "projectPath": "E:\\Flappy-Bird-Remake\\Flappy-Bird-Remake\\Flappy-Bird-Remake.csproj",
+        "projectPath": "E:\\Programming\\Projects\\OpenSource (I'm a GOD)\\repositories\\Flappy-Bird-Remake\\Flappy-Bird-Remake-With-Godot\\Flappy-Bird-Remake.csproj",
         "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-        "outputPath": "E:\\Flappy-Bird-Remake\\Flappy-Bird-Remake\\.mono\\temp\\obj\\",
+        "outputPath": "E:\\Programming\\Projects\\OpenSource (I'm a GOD)\\repositories\\Flappy-Bird-Remake\\Flappy-Bird-Remake-With-Godot\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",

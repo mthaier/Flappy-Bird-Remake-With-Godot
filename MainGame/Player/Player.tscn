@@ -42,11 +42,13 @@ shape = SubResource( 1 )
 [node name="Rocket" type="Sprite" parent="Player/PlayerRotation"]
 modulate = Color( 1.2, 1.2, 1.2, 1 )
 scale = Vector2( 0.09, 0.09 )
+z_index = 1
 texture = ExtResource( 1 )
 
 [node name="FlyParticles" type="Particles2D" parent="Player/PlayerRotation"]
 modulate = Color( 1.35, 1.35, 1.35, 1 )
 position = Vector2( -42.1582, 0 )
+z_index = 1
 amount = 20
 lifetime = 1.5
 speed_scale = 3.0
@@ -54,16 +56,14 @@ visibility_rect = Rect2( -100, -100, 198.97, 200 )
 local_coords = false
 process_material = SubResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="Player/PlayerRotation"]
+[node name="Area2D" type="Area2D" parent="Player/PlayerRotation"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerRotation/Area2D"]
+scale = Vector2( 4, 1 )
+shape = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 smoothing_enabled = true
 smoothing_speed = 10.0
-
-[node name="Area2D" type="Area2D" parent="Player/PlayerRotation"]
-
-[node name="Area2D" type="Area2D" parent="Player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
-scale = Vector2( 4, 1 )
-shape = SubResource( 5 )
-[connection signal="body_entered" from="Player/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Player/PlayerRotation/Area2D" to="." method="BodyEntered"]

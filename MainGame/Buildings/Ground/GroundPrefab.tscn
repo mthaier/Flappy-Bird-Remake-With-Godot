@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MainGame/Buildings/Ground/Ground.png" type="Texture" id=1]
 [ext_resource path="res://MainGame/Buildings/Ground/Empty.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1985.87, 1712.66 )
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 10500, 4000, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 10.0
+scale_random = 1.0
 
 [node name="GroundPrefab" type="Node2D"]
 
@@ -514,8 +525,8 @@ visible = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Size/Celeing/Group 4/Ground5/KinematicBody2D"]
 polygon = PoolVector2Array( 0, -430, 500, 430, -500, 430 )
 
-[node name="FloorFilling" type="StaticBody2D" parent="Size"]
-position = Vector2( 79.925, 3640 )
+[node name="FloorFilling" type="Node2D" parent="Size"]
+position = Vector2( 0, 3640 )
 scale = Vector2( 5, 1 )
 
 [node name="Empty" type="Sprite" parent="Size/FloorFilling"]
@@ -524,11 +535,8 @@ scale = Vector2( 4, 4 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Size/FloorFilling"]
-shape = SubResource( 1 )
-
-[node name="CelingFilling" type="StaticBody2D" parent="Size"]
-position = Vector2( 79.925, -3640 )
+[node name="CelingFilling" type="Node2D" parent="Size"]
+position = Vector2( 0, -3640 )
 scale = Vector2( 5, 1 )
 
 [node name="Empty" type="Sprite" parent="Size/CelingFilling"]
@@ -537,5 +545,22 @@ scale = Vector2( 4, 4 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Size/CelingFilling"]
-shape = SubResource( 1 )
+[node name="BG" type="Node2D" parent="Size"]
+scale = Vector2( 5, 1.5 )
+z_index = -2
+
+[node name="Empty" type="Sprite" parent="Size/BG"]
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+material = SubResource( 3 )
+scale = Vector2( 4, 4 )
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="BackgroundParticles" type="Particles2D" parent="Size"]
+amount = 10000
+lifetime = 100.0
+explosiveness = 1.0
+fract_delta = false
+visibility_rect = Rect2( -1e+06, -1e+06, 2e+06, 2e+06 )
+process_material = SubResource( 2 )

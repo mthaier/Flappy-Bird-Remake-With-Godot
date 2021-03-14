@@ -6,3 +6,11 @@ E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake
 E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.csproj.CoreCompileInputs.cache
 E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.dll
 E:\Flappy-Bird-Remake\Flappy-Bird-Remake\.mono\temp\obj\Debug\Flappy-Bird-Remake.pdb
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\bin\Debug\Flappy-Bird-Remake.dll
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\bin\Debug\Flappy-Bird-Remake.pdb
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.csprojAssemblyReference.cache
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.AssemblyInfoInputs.cache
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.AssemblyInfo.cs
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.csproj.CoreCompileInputs.cache
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.dll
+E:\Programming\Projects\OpenSource (I'm a GOD)\repositories\Flappy-Bird-Remake\Flappy-Bird-Remake-With-Godot\.mono\temp\obj\Debug\Flappy-Bird-Remake.pdb

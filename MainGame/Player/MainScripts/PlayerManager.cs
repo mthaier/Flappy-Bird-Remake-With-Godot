@@ -2,14 +2,27 @@ using Godot;
 
 public class PlayerManager : Node
 {
+	private string PlayMode = "Alive"; //The mods are: Alive, Dead, and Super
+	public void SetPlayMode(string Mode)
+	{
+		if (Mode == "Alive" || Mode == "Dead" || Mode == "Super")
+		{
+			PlayMode = Mode;
+			return;
+		}
+		PlayMode = "Alive";
+	}
+
 	private RigidBody2D playerRb;
 	private Node2D playerRotation;
 	private Particles2D flyPartilces;
 	private const float maximumForce = 1200, flyLerp = 2f;
 	private const float maximumAngle = 50, angleRotateLerp = .09f;
 	private float movingForewardSpeed = 200, maximumForewardForce = 400;
-
 	private MapManager buildMangaer;
+
+	private PackedScene DieParticlesPath = ResourceLoader.Load("res://MainGame/Player/Prefabs/DieParticles/DieParticles.tscn") as PackedScene;
+	private PackedScene DieUiPath = ResourceLoader.Load("res://MainGame/Player/Prefabs/DieUi/DieText.tscn") as PackedScene;
 
 	public override void _Ready()
 	{
@@ -20,12 +33,35 @@ public class PlayerManager : Node
 	}
 	public override void _Process(float delta)
 	{
+		switch (PlayMode)
+		{
+			case "Alive":
+				AliveFunctions();
+				break;
+
+			case "Dead":
+				DieFunctions();
+				break;
+
+			case "Super":
+				break;
+		}
+	}
+	public void BodyEntered(Node body)
+	{
+		if (body.Name != "Player")
+		{
+			Die();
+		}
+	}
+
+	private void AliveFunctions()
+	{
 		MoveForeward();
 		Fly();
 		SpawnBuildingIfNeeded();
 		SpawnGroundIfNeeded();
 	}
-
 	private void Fly()
 	{
 		Vector2 currentForce = playerRb.GetAppliedForce();
@@ -57,7 +93,6 @@ public class PlayerManager : Node
 		}
 	}
 
-
 	private void SpawnBuildingIfNeeded()
 	{
 		if (playerRb.Position.x > buildMangaer.prevoiusStartPoint)
@@ -74,13 +109,37 @@ public class PlayerManager : Node
 	}
 
 
+	private void DieFunctions()
+	{
+		if(Input.IsActionJustPressed("Fly"))
+		{
+			GetTree().ReloadCurrentScene();
+		}
+	}
 	private void Die()
 	{
+		PlayDieEffects();
 
+		DestroyThePlayerObject();
+
+		ResetPlayerVeloctiy();
+
+		SetPlayMode("Dead");
 	}
-	private void _on_Area2D_body_entered(object body)
+	private void PlayDieEffects()
 	{
-		GD.Print("Touched");
-		Die();
+		Particles2D InstntiateParticles = DieParticlesPath.Instance() as Particles2D;
+		AddChild(InstntiateParticles);
+		InstntiateParticles.GlobalPosition = playerRb.GlobalPosition;
+		InstntiateParticles.OneShot = true; InstntiateParticles.Emitting = true;
+	}
+	private void DestroyThePlayerObject()
+	{
+		playerRotation.QueueFree();
+	}
+	private void ResetPlayerVeloctiy()
+	{
+		playerRb.LinearVelocity = Vector2.Zero;
+		playerRb.AppliedForce = Vector2.Zero;
 	}
 }
